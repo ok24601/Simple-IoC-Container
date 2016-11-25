@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context>
+    <!--for XmlValidatorTest-->
+    <invalid_bean>
+        <inv_prop></inv_prop>
+    </invalid_bean>
+
+    <bean id="person" class="oleg.work.domain.Person">
+        <property name="name" value="Oleh"/>
+        <property name="id" value="123" />
+        <property name="pet" ref="cat" />
+    </bean>
+
+    <bean id="cat" class="oleg.work.domain.Cat">
+        <property name="name" value="Mewth"/>
+    </bean>
+
+</context>

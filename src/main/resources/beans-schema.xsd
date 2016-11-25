@@ -1,0 +1,37 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+    <xs:annotation>
+        <xs:documentation xml:lang="en">
+            Spring XML context schema for xml-learning task.
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:element name="context" type="springXmlContext"/>
+
+    <xs:complexType name="springXmlContext">
+        <xs:sequence>
+            <xs:element name="bean" minOccurs="0" maxOccurs="unbounded" type="beanType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="beanType">
+        <xs:sequence>
+            <xs:element name="property" type="beanProperty" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="beanAttributes" />
+    </xs:complexType>
+
+    <xs:complexType name="beanProperty">
+        <xs:attribute name="name" use="required" type="xs:string"/>
+        <xs:attribute name="value" type="xs:string"/>
+        <xs:attribute name="ref" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:attributeGroup name="beanAttributes">
+            <xs:attribute name="id" type="xs:ID"/>
+            <xs:attribute name="class" type="xs:string"/>
+    </xs:attributeGroup>
+
+</xs:schema>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context>
+
+    <bean id="person" class="oleg.work.domain.Person">
+        <property name="name" value="Oleh"/>
+        <property name="id" value="123" />
+        <property name="pet" ref="cat" />
+    </bean>
+
+    <bean id="cat" class="oleg.work.domain.Cat">
+        <property name="name" value="Mewth"/>
+    </bean>
+
+</context>
