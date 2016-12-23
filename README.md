@@ -2,7 +2,7 @@
 
 Applicaition should read xml configuration file (similar to Spring)
 
-<?xml version="1.0" encoding="UTF-8"?>
+
 <context>
 	<bean id="bean_id" class="class_name">
 		<property name="p_name1" value="p_value" />
